@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Concept</title>
+</head>
+<body>
+    <script>
+      //24/7/2024
+
+        //removing array items from index
+        let num1=[1,2,3,4,5,6,7]
+        num1.splice(2,2);
+        console.log(num1);
+
+        //array spreading
+        const ara1=[1,2,3,4];
+        const ara2=[5,6,7,8];
+        const comb=[...ara1,...ara2];
+        console.log(comb);
+
+        //inserting array item 
+        let ar=[10,20,30,40,60,70,80,90]
+        ar.splice(4,1,55);
+        console.log(ar);
+
+        //finding the longest string in the array
+        let str=["I like to paly football",
+            "I like skydiving",
+            "I am a Fullstact developer"
+        ]
+        function longest(){
+            return str.sort(function(a,b){
+                    return b.length-a.length;
+            })[0];
+        }
+        console.log(longest());
+        
+        //rotate an array
+        function rotatearr(arr, rotateBy) {
+            const n = arr.length;
+            rotateBy %= n;
+         
+            return arr.slice(rotateBy).concat(arr.slice(0, rotateBy));
+        }
+         
+        const originalArray = [5,6,7,8,9,10];
+        const rotatedarr = rotatearr(originalArray, 2);
+        console.log(rotatedarr);
+    </script>
+</body>
+</html>
